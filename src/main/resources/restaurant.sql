@@ -18,7 +18,7 @@ CREATE TABLE employee (
   id         INT         NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(20) NOT NULL,
   last_name  VARCHAR(20) NOT NULL,
-  position   INT         NOT NULL,
+  position   INT,
   salary     INT,
   photo_url  VARCHAR(50),
   dtype      VARCHAR(50),
@@ -60,7 +60,7 @@ INSERT INTO position VALUES (5, 'Waiter');
 
 CREATE TABLE orders (
   id           INT  NOT NULL AUTO_INCREMENT,
-  waiter_id    INT  NOT NULL,
+  waiter_id    INT,
   table_number INT,
   date         DATE NOT NULL,
   PRIMARY KEY (id)
@@ -75,7 +75,7 @@ INSERT INTO orders (waiter_id, table_number, date) VALUES (8, 4, '2016-11-20');
 CREATE TABLE dish (
   id        INT         NOT NULL AUTO_INCREMENT,
   name      VARCHAR(20) NOT NULL,
-  category  INT         NOT NULL,
+  category  INT,
   price     DOUBLE      NOT NULL,
   weight    INT         NOT NULL,
   photo_url VARCHAR(50),
@@ -143,9 +143,9 @@ INSERT INTO order_details VALUES (5, 2);
 
 CREATE TABLE cooked_dish (
   id        INT NOT NULL AUTO_INCREMENT,
-  dish_id   INT NOT NULL,
-  cooker_id INT NOT NULL,
-  order_id  INT NOT NULL,
+  dish_id   INT,
+  cooker_id INT,
+  order_id  INT,
   PRIMARY KEY (id)
 );
 
@@ -270,17 +270,24 @@ INSERT INTO dish_details VALUES (15, 26);
 INSERT INTO dish_details VALUES (15, 27);
 
 CREATE TABLE user (
-  id       INT         NOT NULL AUTO_INCREMENT,
-  username VARCHAR(50) NOT NULL UNIQUE,
-  password VARCHAR(50) NOT NULL,
-  email    VARCHAR(20) NOT NULL UNIQUE,
+  id       INT          NOT NULL AUTO_INCREMENT,
+  username VARCHAR(50)  NOT NULL UNIQUE,
+  password VARCHAR(200) NOT NULL,
+  email    VARCHAR(20)  NOT NULL UNIQUE,
   name     VARCHAR(50),
-  role     INT         NOT NULL DEFAULT 1,
+  role     INT          NOT NULL DEFAULT 1,
   PRIMARY KEY (id)
 );
 
 INSERT INTO user (username, password, email, name, role)
-VALUES ('admin', 'admin', 'anna.chepiga@list.ru', 'anna', 2);
+VALUES ('admin',
+        '1c71ad1441cb1ad17612a15d1a01a41521f91e81541fd1c11e01e71a512a13810115f1231f31ea1b11d810b19311d1d417216314d1fa1c711c1d314e1bc1351d116a1b71fb18a1901c811f1971511131d61c715318d1c619d1d81de1901771ec',
+        'anna.chepiga@list.ru', 'anna', 2);
+INSERT INTO user (username, password, email, name, role)
+VALUES ('user',
+        '1b114316114014c10718f1fd15419c1031db14413c13f1ed1e21f31e51341d713f1781f71731011ed1971d41a41361a91fd19d1b015e1e81b31251c01ad13614318b1431fe1c815110c12014f1c11c11ed1b211d1091411c010e19e12c11c1e2',
+        'user@gmail.com', 'user', 1);
+
 
 CREATE TABLE user_role (
   id   INT         NOT NULL,
