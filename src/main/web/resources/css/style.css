@@ -1,0 +1,163 @@
+body {
+    background-image: url(../images/background.jpg);
+}
+
+a {
+    color: #555e25;
+}
+
+h1 {
+    font-family: Dancing Script;
+    color: #d10220;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
+#usrnm {
+    color: #d10220;
+    font-weight: bold;
+    border-bottom: double #d10220;
+}
+
+#outer {
+    width: 996px;
+    margin: 0 auto;
+    background: #fff url(../images/paper.jpg);
+    border-right: solid #493a35 1px;
+    border-left: solid #493a35 1px;
+}
+
+#hdr {
+    padding-top: 322px;
+    background: #cdb9a9 url(../images/header1.jpg) no-repeat;
+    text-align: center;
+}
+
+#footer {
+    font-size: 1em;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-top: 1px solid #493a35;
+}
+
+#linkname {
+    font-size: 2em;
+    font-family: Dancing Script;
+    text-decoration: none;
+}
+
+#linkremove {
+    font-size: small;
+}
+
+#hdrname {
+    font-size: 2em;
+    font-family: Dancing Script;
+    color: #d10220;
+    font-weight: bold;
+}
+
+#tbl {
+    float: left;
+    /*align-items: center;*/
+}
+
+#tbl a {
+    font-family: Dancing Script;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#tbl h1 {
+    text-align: center;
+}
+
+#tbl td {
+    text-align: center;
+}
+
+#cont2 {
+    float: right;
+    height: 333px;
+}
+
+#cont2 a {
+    font-family: Dancing Script;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#cont2 p {
+    text-align: center;
+}
+
+#lgdetails {
+    width: 1000px;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+#nav {
+    text-align: center;
+}
+
+#cont {
+    padding: 3em;
+}
+
+.main-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #e5e5e5;
+}
+
+.main-menu > li {
+    position: relative;
+    display: inline-block;
+    margin-right: -4px;
+    width: 25%;
+}
+
+.main-menu a {
+    display: block;
+    margin-left: -1px;
+    padding: 8px 10px;
+    color: #555e25;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.main-menu a:hover {
+    background: #e2ddd9;
+}
+
+.main-menu .sub-menu {
+    position: absolute;
+    left: 1px;
+    display: none;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #fff url(../images/paper.jpg);
+}
+
+.main-menu .sub-menu a {
+    margin-bottom: -1px;
+    border: 1px solid #e5e5e5;
+}
+
+.main-menu > li:hover .sub-menu {
+    display: block;
+}

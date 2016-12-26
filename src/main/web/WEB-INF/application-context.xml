@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd"
+
+       default-autowire="byName">
+
+    <bean class="ua.goit.dao.hibernate.HEmployeeDao" id="employeeDao"/>
+    <bean class="ua.goit.dao.hibernate.HPositionDao" id="positionDao"/>
+    <bean class="ua.goit.dao.hibernate.HDishDao" id="dishDao"/>
+    <bean class="ua.goit.dao.hibernate.HDishCategoryDao" id="dishCategoryDao"/>
+    <bean class="ua.goit.dao.hibernate.HIngredientDao" id="ingredientDao"/>
+    <bean class="ua.goit.dao.hibernate.HMenuDao" id="menuDao"/>
+    <bean class="ua.goit.dao.hibernate.HOrderDao" id="orderDao"/>
+    <bean class="ua.goit.dao.hibernate.HRestaurantInfoDao" id="restaurantInfoDao"/>
+    <bean class="ua.goit.dao.hibernate.HUserDao" id="userDao"/>
+    <bean class="ua.goit.dao.hibernate.HUserRoleDao" id="userRoleDao"/>
+    <bean class="ua.goit.dao.hibernate.HCookedDishDao" id="cookedDishDao"/>
+
+    <bean class="ua.goit.services.EmployeeService" id="employeeService"/>
+    <bean class="ua.goit.services.DishService" id="dishService"/>
+    <bean class="ua.goit.services.OrderService" id="orderService"/>
+    <bean class="ua.goit.services.MenuService" id="menuService"/>
+    <bean class="ua.goit.services.IngredientService" id="ingredientService"/>
+    <bean class="ua.goit.services.UserService" id="userService"/>
+    <bean class="ua.goit.services.RestaurantInfoService" id="restaurantInfoService"/>
+    <bean class="ua.goit.services.CookedDishService" id="cookedDishService"/>
+    <bean class="ua.goit.services.DishCategoryService" id="dishCategoryService"/>
+    <bean class="ua.goit.services.PositionService" id="positionService"/>
+    <bean class="ua.goit.services.ImageService" id="imageService"/>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+</beans>
