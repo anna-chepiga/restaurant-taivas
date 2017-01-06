@@ -3,15 +3,17 @@ CREATE DATABASE restaurant_taivas;
 USE restaurant_taivas;
 
 CREATE TABLE restaurant_info (
+  id                    INT          NOT NULL,
   name                  VARCHAR(20)  NOT NULL,
   address               VARCHAR(100) NOT NULL,
   phone_number          VARCHAR(20),
   email                 VARCHAR(20),
-  restaurant_schema_url VARCHAR(100)
+  restaurant_schema_url VARCHAR(100),
+  PRIMARY KEY (id)
 );
 
 INSERT INTO restaurant_info VALUES
-  ('Taivas', '1119 Macdougal St, New York,<br> NY 10012, USA', '1-800-123-4567', 'taivas@gmail.com',
+  (1, 'Taivas', '1119 Macdougal St, New York,<br> NY 10012, USA', '1-800-123-4567', 'taivas@gmail.com',
    '/resources/images/restaurant_info/restaurant_schema.jpg');
 
 CREATE TABLE employee (
