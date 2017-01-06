@@ -80,9 +80,3 @@ public class MainController {
         this.categoryService = categoryService;
     }
 }
-
-// TODO: 15.12.2016 user can make order from cabinet
-// TODO: 17.12.2016 разобраться с ордером, просто блюдом и приготовленным блюдом
-// TODO: 21.12.2016 еимплои - официант - повар - конструкторы
-// TODO: 22.12.2016 infocontroller - send feedback to email
-// TODO: 24.12.2016 разобраться с dependecy

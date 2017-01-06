@@ -33,7 +33,7 @@
 
     </div>
 
-    <jsp:include page="/footer"/>
+    <jsp:include page="${pageContext.request.contextPath}/footer.jsp"/>
 </div>
 </body>
 </html>

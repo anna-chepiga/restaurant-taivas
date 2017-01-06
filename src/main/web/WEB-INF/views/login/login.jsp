@@ -20,7 +20,7 @@
         <img align="center" width="900px" src="${pageContext.request.contextPath}/resources/images/divider2.png">
     </div>
 
-    <jsp:include page="/footer"/>
+    <jsp:include page="${pageContext.request.contextPath}/footer.jsp"/>
 </div>
 </body>
 
