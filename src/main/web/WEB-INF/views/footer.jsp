@@ -27,7 +27,7 @@
             </td>
 
             <td><img src="${pageContext.request.contextPath}/resources/images/phone.png"></td>
-            <td>${info.phoneNumber}</td>
+            <td>1-800-123-4567</td>
 
             <td rowspan="4" valign="top">
                 <iframe width="350" height="200" frameborder="0" style="border:0"
@@ -37,11 +37,11 @@
 
         <tr>
             <td><img src="${pageContext.request.contextPath}/resources/images/email.png"></td>
-            <td>${info.email}</td>
+            <td>taivas@gmail.com</td>
         </tr>
         <tr>
             <td><img src="${pageContext.request.contextPath}/resources/images/address.png"></td>
-            <td>${info.address}</td>
+            <td>1119 Macdougal St, New York,<br>NY 10012, USA</td>
         </tr>
         <tr>
             <td><img src="${pageContext.request.contextPath}/resources/images/schema.png"></td>
