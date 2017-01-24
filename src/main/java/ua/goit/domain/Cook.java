@@ -13,9 +13,8 @@ public class Cook extends Employee {
     @JoinColumn(name = "cooker_id")
     private List<CookedDish> cookedDishes;
 
-    public Cook(String firstName, String lastName, Position position, Integer salary, String photoUrl, List<CookedDish> cookedDishes) {
+    public Cook(String firstName, String lastName, Position position, Integer salary) {
         super(firstName, lastName, position, salary);
-        this.cookedDishes = cookedDishes;
     }
 
     public Cook(List<CookedDish> cookedDishes) {

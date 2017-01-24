@@ -10,9 +10,8 @@ public class Waiter extends Employee {
     @JoinColumn(name = "waiter_id")
     private Set<Orders> orders;
 
-    public Waiter(String firstName, String lastName, Position position, Integer salary, Set<Orders> orders) {
+    public Waiter(String firstName, String lastName, Position position, Integer salary) {
         super(firstName, lastName, position, salary);
-        this.orders = orders;
     }
 
     public Waiter(Set<Orders> orders) {
