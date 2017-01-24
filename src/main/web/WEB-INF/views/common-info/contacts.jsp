@@ -24,8 +24,8 @@
         </table>
 
         <form action="${pageContext.request.contextPath}/contacts" method="post">
-            <p>Your name: <input type="text" title="name" name="user_name"></p>
-
+            <p>Your name: <input type="text" name="user_name"></p>
+            <p>Your email: <input type="email" name="email"></p>
             <p>Your comment:</p>
             <p><textarea name="comment" cols="40" rows="4" title="comment"></textarea></p>
 

@@ -11,11 +11,7 @@
     <div id="cont">
         <h3>Thank you for your feedback, ${user_name}!</h3>
 
-        <p>Your message is: </p>
-
-        <p>${comment}</p>
-
-        <p>It will be processed by us as soon as possible! =)</p>
+        <p>Your message is sent to our email. It will be processed by us as soon as possible! =)</p>
         <img align="center" width="900px" src="${pageContext.request.contextPath}/resources/images/divider2.png">
         <jsp:include page="../login-details.jsp"/>
     </div>
