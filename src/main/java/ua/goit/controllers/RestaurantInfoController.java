@@ -37,8 +37,12 @@ public class RestaurantInfoController {
     public ModelAndView feedback(HttpServletRequest req) {
         ModelAndView model = new ModelAndView();
 
-        model.addObject("user_name", req.getParameter("user_name"));
-        model.addObject("comment", req.getParameter("comment"));
+        String name = req.getParameter("user_name");
+        String email = req.getParameter("email");
+        String comment = req.getParameter("comment");
+
+        model.addObject("user_name", name);
+        infoService.sendFeedback(name, email, comment);
 
         model.setViewName("common-info/feedback-sent");
         return model;

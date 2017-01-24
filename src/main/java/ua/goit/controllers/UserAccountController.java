@@ -137,16 +137,6 @@ public class UserAccountController {
 
     }
 
-    /*So, when creating the cookie do:
-
-Cookie cookie = new Cookie(name, URLEncoder.encode(value, "UTF-8"));
-// ...
-And when reading the cookie, do:
-
-String value = URLDecoder.decode(cookie.getValue(), "UTF-8");*/
-
-
-
     @Autowired
     public void setUserService(UserService userService) {
         this.userService = userService;

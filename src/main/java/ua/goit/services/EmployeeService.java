@@ -4,8 +4,10 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import ua.goit.dao.EmployeeDao;
 import ua.goit.dao.PositionDao;
+import ua.goit.domain.Cook;
 import ua.goit.domain.Employee;
 import ua.goit.domain.Position;
+import ua.goit.domain.Waiter;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -52,7 +54,19 @@ public class EmployeeService {
         }
 
         Position position = positionDao.findByName(positionName);
-        Employee employee = new Employee(name, lastName, position, salary);
+        Employee employee;
+
+        switch (positionName) {
+            case "Waiter":
+                employee = new Waiter(name, lastName, position, salary);
+                break;
+            case "Cook":
+                employee = new Cook(name, lastName, position, salary);
+                break;
+            default:
+                employee = new Employee(name, lastName, position, salary);
+                break;
+        }
 
         Set<Employee> allEmployees = new HashSet<>(findAll());
         if (!allEmployees.contains(employee)) {

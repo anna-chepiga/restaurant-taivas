@@ -37,7 +37,7 @@
 
         <tr>
             <td><img src="${pageContext.request.contextPath}/resources/images/email.png"></td>
-            <td>taivas@gmail.com</td>
+            <td>taivas.site@gmail.com</td>
         </tr>
         <tr>
             <td><img src="${pageContext.request.contextPath}/resources/images/address.png"></td>
@@ -50,7 +50,5 @@
         </tr>
     </table>
 </div>
-
-
 </body>
 </html>
